@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "name": "nuevo",
+  "description": "��#\u0000 \u0000P\u0000T\u00001\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "JavaScrip.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David20020111/PT1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David20020111/PT1/issues"
+  },
+  "homepage": "https://github.com/David20020111/PT1#readme"
+}
