@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-    <p>Esta cargando la plantilla</p>
+    <div class="container">
+        <!--Comienza el form-->
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/add" method="POST">
+                        <div class="form-group">
+                            <label for="vehiculo" class="form-label">Vehiculo</label>
+                            <input type="text" id="vehiculo" name="vehiculo" placeholder="Vehiculo" class="form-control">
+                        </div>
+                        <div>
+                            <label for="precio" class="form-label">Precio</label>
+                            <input type="number" id="precio" name="precio" class="form-control">
+                        </div>
+                        <div>
+                            <label for="iva" class="form-label">IVA</label>
+                            <input type="number" id="iva" name="iva" class="form-control">
+                        </div>
+                        <button class="btn btn-primary">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Comienza tabla-->
+        <div class="col-md-5">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Vehiculo</th>
+                        <th>Precio</th>
+                        <th>IVA</th>
+    
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i = 0; i < datos.length; i++){  %>
+                        <tr>
+                            <td><%= i+1  %></td>
+                            <td><%= datos[i].Vehiculo  %></td>
+                            <td><%= datos[i].Precio  %></td>
+                            <td><%= datos[i].IVA  %></td>
+                            <td>
+                                <!--<a class="btn btn-primary" href="/del/<%= datos[i].id %>">Eliminar</a>-->
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    Eliminar
+                                </button>
+                                
+                                <!-- Modal -->
+                              
+    
+                               
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+     </div>
 </body>
 </html>
